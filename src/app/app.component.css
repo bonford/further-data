@@ -1,0 +1,17 @@
+.fd_red {
+    color: #cc0000;
+    font-weight: bold;
+    background-image: url('assets/d.gif');
+    background-repeat: no-repeat;
+    background-position: 0.60em 0%;
+    padding-left: 1.25em;
+}
+
+.fd_green {
+    color: #009900;
+    font-weight: bold;
+    background-image: url('assets/u.gif');
+    background-repeat: no-repeat;
+    background-position: 0.60em 0%;
+    padding-left: 1.25em;
+}

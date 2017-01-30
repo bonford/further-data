@@ -62,7 +62,7 @@
 <b> {{m.title}}</b><table class="innerDetail">         
                  <tr><td class="f_tabletitle" width="48%">Index Value:</td><td class="f_td"><b>{{m.l}}</b></td></tr>       
         <tr><td class="f_tabletitle" width="48%">Trade Time:</td><td class="f_td">{{m.ltt}}</td></tr>        
-       <tr><td class="f_tabletitle" width="48%">Change:</td><td class="f_td">{{m.c}} ({{m.cp}}%)</td></tr>       
+       <tr><td class="f_tabletitle" width="48%">Change:</td><td class="f_td" [ngClass]="{'fd_red': m.c < 0, 'fd_green': m.c > 0}">{{m.c}} ({{m.cp}}%)</td></tr>       
         <tr><td class="f_tabletitle" width="48%">Prev Close:</td><td class="f_td">{{m.previousclose}}</td></tr>       
         </table>
  
