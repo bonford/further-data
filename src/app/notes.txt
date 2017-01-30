@@ -1,0 +1,62 @@
+prettified result of: http://www.documenthunt.com/googjson/googjson.php?q=aapl,ibm,boogle,xei.to
+
+Example of how to get the markers into the component using a directive
+https://github.com/SebastianM/angular2-google-maps/issues/685
+
+todo: factor, factor, factor
+
+work api: AIzaSyDIcb6pzu3-NQyyA2hOlIOF4es0Ajegbb0
+home api: AIzaSyATvHirvnVZjdtJLKrqS9CEHmuFX_3NkDQ
+
+note the json skips bad symbols
+[
+{
+      "title":"Bombay (BSE 30)",
+      "city":"Bombay",
+      "index":"(BSE 30)",
+      "t":"SENSEX",
+      "e":"INDEXBOM",
+      "lat":18.975,
+      "lng":72.8258333,
+      "l":"27,708.14",
+      "ltt":"3:40PM GMT+5:30",
+      "c":"+332.56",
+      "cp":"1.21",
+      "iconUrl":"http:\/\/www.furtherdata.com\/images\/up.png"
+   },
+   {
+      "title":"Brussels (BEL-20)",
+      "city":"Brussels",
+      "index":"(BEL-20)",
+      "t":"BEL20",
+      "e":"INDEXEURO",
+      "lat":50.8333333,
+      "lng":4.3333333,
+      "l":"3,605.05",
+      "ltt":"6:05PM GMT+1",
+      "c":"+45.60",
+      "cp":"1.28",
+      "iconUrl":"http:\/\/www.furtherdata.com\/images\/up.png"
+   },
+   {
+      "title":"Buenos Aires (MerVal)",
+      "city":"Buenos Aires",
+      "index":"(MerVal)",
+      "t":"IAR",
+      "e":"BCBA",
+      "lat":-34.5875,
+      "lng":-58.6725,
+      "l":"17,762.35",
+      "ltt":"5:01PM GMT-3",
+      "c":"+76.23",
+      "cp":"0.43",
+      "iconUrl":"http:\/\/www.furtherdata.com\/images\/up.png"
+   }
+]
+
+
+
+
+
+
+github tutorial: http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1/

@@ -1,1 +1,145 @@
-/* You can add global styles to this file, and also import other style files */
+.sebm-google-map-container {
+  height: 600px;
+
+  width: 525px; 
+
+}
+
+.navbar {
+  background-color:#9a9a99;
+  border:none;
+}
+
+.navbar-brand {
+color:  #f8f8ff !important;
+}
+
+.map {
+  height: 420px; 
+  width: 525px;  
+  color:#666666; 
+  border-width: 2px; 
+  border-style: solid; 
+  border-color: #99b3e6; 
+  text-align: 
+  left;overflow:hidden;
+  
+  }
+ .fd_exchange_list ul{
+   float: left;
+   width: 3em;
+   height: 600px;
+ 
+ }
+
+ /* site title  */
+
+ .navbar-brand {
+   font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+   font-size: 40px;
+
+ }
+
+ /* side bar */
+ #side_bar {
+   height:420px;
+   overflow:auto;
+   width:250px;
+   border-bottom:
+   1px solid #99b3e6;
+ } 
+
+ .market {
+    font-family: 'Lucida Grande', sans-serif;
+    font-size: 12px;
+     font-size: 14px;
+}
+.innerDetail {
+    font-family: 'Lucida Grande', sans-serif;
+    font-size: 12px;
+}
+ul.market {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 230px;
+    border-top:1px solid #99b3e6; 
+     border-left: 1px solid #99b3e6;
+    border-right: 1px solid #99b3e6;
+ 
+}
+ul.market li {
+    text-indent: 1em;
+    text-align: left;
+    /*
+    border-left: 1px solid #99b3e6;
+    border-right: 1px solid #99b3e6;
+    border-bottom: 0.5px solid #99b3e6;
+     */
+}
+
+ul.market li:last-child {
+    border:none;
+}
+#top {
+    border-top: 1px solid #99b3e6;
+}
+ul.market a {
+    display: block;
+    height: 3em;
+    line-height: 3em;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+ul.market a:hover {
+    /* background: #ffecc7 url(select.png) repeat-x 0 top; */
+    background: #ffecc7; 
+}
+
+
+/* info window styles */
+
+.innerDetail {
+   border-width: 1px;
+   border-style: solid;
+   border-color: #99b3e6;
+   border-collapse: collapse;
+   text-indent: 0.5em;
+   width:250px; 
+   width:19em;
+  }
+
+  .even {
+    background-color: #f2f5fc;
+}
+.f_table {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #99b3e6;
+    border-collapse: collapse;
+    text-indent: .5em;
+}
+.f_td {
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #99b3e6;
+}
+.f_tabletitle {
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #99b3e6;
+    background: #f2f5fc;
+}
+
+  
+
+  
+
+
+
+
