@@ -4,7 +4,7 @@ import {SebmGoogleMapMarker, SebmGoogleMapInfoWindow } from 'angular2-google-map
 @Directive({
   selector: 'get-marker-objects',
 })
-export class GetMarkerObjectsDirective implements AfterViewInit {
+export class MarkerObjectsDirective implements AfterViewInit {
 
   
 
