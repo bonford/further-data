@@ -1,9 +1,9 @@
 import { ViewChild, ViewChildren, ElementRef} from '@angular/core';
 import { Component } from '@angular/core';
-import {HttpService} from '../http/http.service';
+import {HttpService} from './http/http.service';
 import {SebmGoogleMapMarker, SebmGoogleMapInfoWindow, GoogleMapsAPIWrapper, MarkerManager} from 'angular2-google-maps/core';
-import { GetMarkerObjectsDirective } from '../get-marker-objects/get-marker-objects.directive';
-import { MapFooterComponent } from '../map-footer/map-footer.component';
+import { MarkerObjectsDirective } from './marker-objects/marker-objects.directive';
+import { MapFooterComponent } from './map-footer/map-footer.component';
 declare var google: any;
 
 
