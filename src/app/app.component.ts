@@ -43,7 +43,7 @@ export class AppComponent {
 
   setMarkers(markers: SebmGoogleMapMarker[]){
     this.markers = markers;
-   console.log('in set markers', markers);    
+    // console.log('in set markers', markers);    
   }  
  
   
