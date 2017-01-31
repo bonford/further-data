@@ -50,6 +50,7 @@ export class AppComponent {
 
   listClick(i){
     this.markers[i].infoWindow.open();
+    console.log(this.stocks[15].c)
    }
 
   
