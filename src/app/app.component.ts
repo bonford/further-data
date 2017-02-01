@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import {HttpService} from './http/http.service';
 import {SebmGoogleMapMarker, SebmGoogleMapInfoWindow, GoogleMapsAPIWrapper, MarkerManager} from 'angular2-google-maps/core';
 import { MarkerObjectsDirective } from './marker-objects/marker-objects.directive';
+import { ResponsiveJsService } from './responsive-js/responsive-js.service'
 import { MapFooterComponent } from './map-footer/map-footer.component';
 declare var google: any;
 
@@ -13,7 +14,7 @@ declare var google: any;
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [HttpService, GoogleMapsAPIWrapper]
+  providers: [HttpService, GoogleMapsAPIWrapper, ResponsiveJsService]
 })
 export class AppComponent {
 
@@ -29,7 +30,7 @@ export class AppComponent {
   _lng: number = 40.369636;
   _zoom: number = 1;
   stocks: any[];
-  constructor( private _httpService: HttpService, private _googleMapsAPIWrapper: GoogleMapsAPIWrapper){
+  constructor( private _httpService: HttpService, private _googleMapsAPIWrapper: GoogleMapsAPIWrapper, private _responisveJsService: ResponsiveJsService){
        
   }
 
