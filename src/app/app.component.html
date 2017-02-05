@@ -1,49 +1,19 @@
 
-<nav class="navbar navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">FURTHER data</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <div class="container">
-
-      <div class="row">
-        <div class="col-md-12">
-          
-        
-      </div>
-
-    </div><!-- /.container -->
-
-    <div>
-
-        
+   
  
-      <table border=0>
-  <tr><td colspan="2"><img src="assets/i_watch.gif" alt="index watch logo" style="float:left"/><img src="assets/legend.gif" alt="map legend" style="float:right"/></tr>
+     
 
-      <tr>
-	  <!--<td width = 300 valign="top" style="text-decoration: underline; color: #4444ff;"> -->
-	  <td>
- <div id="side_bar"><ul *ngFor="let stock of stocks; let i=index; let even=even" [ngClass]="{even: even}" class="market">
-  <li (click)="listClick(i)"><a>{{stock.title}}</a> 
+    <div id="sidebar-wrapper">  
+ <div id="sidebar">
+    <div class='heading'>
+    <h1>Stock Exchange Indices</h1>
+  </div>
+   <ul class="markets" id="markets">
+  <li *ngFor="let stock of stocks; let i=index; let even=even" [ngClass]="{'even': even, 'item': true}" (click)="listClick(i)"><a>{{stock.title}}</a> 
       </li>
-  </ul></div>        </td>
-        <td>
-           <div class="map" id="map1"> 
+  </ul></div>  
+  </div>  <!-- end sidebar-wrapper -->      
+           <div class="map" id="map-wrapper"> 
              <sebm-google-map [latitude]="_lat"  
               [longitude]="_lng"  
               [zoom]="_zoom"  
@@ -72,14 +42,14 @@
   
 
   </get-marker-objects>
-  </sebm-google-map></div>        </td>
-      </tr>
-	  <tr><td colspan="2"><map-footer></map-footer></td></tr>
-  </table>
+  </sebm-google-map></div>        
+      
+	  <map-footer></map-footer>
+  
   <div id="message1"></div>
   <div id="message2"></div>
   <div id="message3"></div>
-      </div>
+     
 
   
 
