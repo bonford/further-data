@@ -14,12 +14,13 @@
   </ul></div>  
   </div>  <!-- end sidebar-wrapper -->      
            <div class="map" id="map-wrapper"> 
+             <get-marker-objects  (markers)="setMarkers($event)" (map)="setMap($event)">  
              <sebm-google-map [latitude]="_lat"  
               [longitude]="_lng"  
               [zoom]="_zoom"  
               >
 
-          <get-marker-objects  (markers)="setMarkers($event)">    
+            
 
   <sebm-google-map-marker 
   *ngFor="let m of stocks; let i = index"
@@ -41,8 +42,10 @@
   </sebm-google-map-marker>
   
 
-  </get-marker-objects>
-  </sebm-google-map></div>        
+
+  </sebm-google-map>
+    </get-marker-objects>
+  </div>        
       
 	  <map-footer></map-footer>
   

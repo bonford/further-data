@@ -1,13 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Injectable} from '@angular/core';
+//import { SebmGoogleMap } from 'angular2-google-maps/core';
+import { MarkerObjectsDirective } from '../marker-objects/marker-objects.directive';
+
 
 declare var breaky: any;
-
+declare var google: any;
 
 
 @Injectable()
-export class ResponsiveJsService {
+export class ResponsiveJsService{
+	private map: any;
    // all wired up: adjust as needed
+
+  // private _map: SebmGoogleMap;
    constructor() {
+	  // console.log('in responsive-js constructor: ', this._map);
+	  
 
  // todo: get map object from marker-object service and use to adjust map sizes  
  /* 
@@ -58,6 +66,18 @@ export class ResponsiveJsService {
 
 
   }
+
+   setMap(map: any){
+    this.map = map;
+     console.log('in set map', map);    
+  }  
+
+  ngOnInit() {
+	  document.addEventListener("DOMContentLoaded", function(event) {
+	  console.log('in responsive-js service: ', this._map);
+	 });
+
+} 
   
 
 }

@@ -23,6 +23,7 @@ export class AppComponent {
   
  
   private markers: SebmGoogleMapMarker[]; 
+  private map: any;
   private infoWindows: SebmGoogleMapInfoWindow[];
   private date = new Date();
 
@@ -30,7 +31,7 @@ export class AppComponent {
   _lng: number = 40.369636;
   _zoom: number = 1;
   stocks: any[];
-  constructor( private _httpService: HttpService, private _googleMapsAPIWrapper: GoogleMapsAPIWrapper, private _responisveJsService: ResponsiveJsService){
+  constructor( private _httpService: HttpService, private _googleMapsAPIWrapper: GoogleMapsAPIWrapper, private _responsiveJsService: ResponsiveJsService){
        
   }
 
@@ -44,10 +45,15 @@ export class AppComponent {
 
   setMarkers(markers: SebmGoogleMapMarker[]){
     this.markers = markers;
-    // console.log('in set markers', markers);    
+     console.log('in set markers', markers);    
+  }  
+
+   setMap(map: any){
+    this.map = map;
+     console.log('in set map', map);    
   }  
  
-  
+ 
 
   listClick(i){
     this.markers[i].infoWindow.open();
