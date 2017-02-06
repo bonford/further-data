@@ -22,7 +22,7 @@ declare var google: any;
 export class AppComponent {
 
 
-  @ViewChild('infoWindow') infoDiv;  
+
   
  
   private markers: SebmGoogleMapMarker[]; 
@@ -52,22 +52,23 @@ export class AppComponent {
   }  
 
    setMap(map: any){
+    
     this.map = map;
      map.setCenter(new google.maps.LatLng(30.508742,0.120850));
     map.setZoom(Math.ceil(Math.log2(document.body.clientWidth))-9);
+
+
+    
+  
      console.log('in set map', map);    
   }  
  
   onResize(event) {
-    let width = document.body.clientWidth;
-     this.map.setCenter(new google.maps.LatLng(30.508742,-0.120850));
-    this.map.setZoom(Math.ceil(Math.log2(document.body.clientWidth))-9);
-   var message1 = document.getElementById("message1");
-   message1.innerHTML = document.body.clientWidth + "";
 
-   if (width < 1341){
-    this.map.setZoom(Math.ceil(Math.log2(document.body.clientWidth))-10);
-   }
+    this._responsiveJsService.makeResponsiveAdjustments(this.map);
+    
+
+  
 }
 
   listClick(i){

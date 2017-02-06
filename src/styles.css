@@ -28,6 +28,11 @@ right: 0;
   box-sizing: border-box;
 }
 
+#app-wrapper {
+   position:relative;
+  
+}
+
 h1 {
   font-size: 22px;
   margin: 0;
@@ -102,6 +107,7 @@ border-right: 11px solid #99b3e6;;
   height: 60px;
   line-height: 60px;
   padding: 0;
+  padding-left:10px;
 }
 
 .markets {
