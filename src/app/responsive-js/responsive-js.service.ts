@@ -18,30 +18,45 @@ export class ResponsiveJsService{
 
   makeResponsiveAdjustments(map:any){
 
- let width = document.body.clientWidth;
+    let width = document.body.clientWidth;
     let wrapper = document.getElementById("app-wrapper");
+	let indicesHeading = document.getElementById("indices-heading");
      map.setCenter(new google.maps.LatLng(30.508742,-0.120850));
     map.setZoom(Math.ceil(Math.log2(document.body.clientWidth))-9);
-   var message1 = document.getElementById("message1");
-   message1.innerHTML = document.body.clientWidth + "";
+   
+   
 
        switch (true) {
     case (width > 1500):
       wrapper.style.width = "1500px";
-      console.log("> 1500");
+     
       break;
-    case (width > 1200):
-      wrapper.style.width = "1200px";
-      console.log("> 1200");
+    case (width > 1210):
+      wrapper.style.width = "1210px";
+     
       break;
-         case (width > 900):
-      wrapper.style.width = "900px";
-      console.log("> 900");
+     case (width > 800):
+      wrapper.style.width = "800px";
+	  map.setZoom(2);
+      break;
+	 case (width > 665):
+      wrapper.style.width = "665px";
+	  indicesHeading.style.marginTop = "-15px"; 
+	  indicesHeading.style.color = "red";
+
+	  map.setZoom(1);
       break;
    
     default:
       console.log("in switch default");
   }
+
+  var message1 = document.getElementById("message1");
+  message1.innerHTML = "window width: " + document.body.clientWidth ;
+
+  var message1 = document.getElementById("message2");
+  message1.innerHTML = "wrapper width: " + wrapper.style.width + "";
+   
   }
   
 

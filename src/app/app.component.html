@@ -5,8 +5,8 @@
 <div id="app-wrapper"  (window:resize)="onResize($event)">
     <div id="sidebar-wrapper">  
  <div id="sidebar">
-    <div class='heading'>
-    <h1>Stock Exchange Indices</h1>
+    <div class="heading">
+    <h1 id="indices-heading">Stock Exchange Indices</h1>
   </div>
    <ul class="markets" id="markets">
   <li *ngFor="let stock of stocks; let i=index; let even=even" [ngClass]="{'even': even, 'item': true}" (click)="listClick(i)"><a>{{stock.title}}</a> 

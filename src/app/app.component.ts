@@ -54,9 +54,8 @@ export class AppComponent {
    setMap(map: any){
     
     this.map = map;
-     map.setCenter(new google.maps.LatLng(30.508742,0.120850));
-    map.setZoom(Math.ceil(Math.log2(document.body.clientWidth))-9);
-
+    
+   this._responsiveJsService.makeResponsiveAdjustments(this.map);
 
     
   
