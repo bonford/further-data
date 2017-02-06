@@ -1,6 +1,6 @@
  *.sebm-google-map-container {
   height:100%;
-padding-bottom:10%;
+/* padding-bottom:10%; */
     position: absolute;  
   top: 0;
   bottom: 0;

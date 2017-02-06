@@ -1,5 +1,5 @@
 import { ViewChild, ViewChildren, ElementRef} from '@angular/core';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import {HttpService} from './http/http.service';
 import {SebmGoogleMapMarker, SebmGoogleMapInfoWindow, GoogleMapsAPIWrapper, MarkerManager} from 'angular2-google-maps/core';
 import { MarkerObjectsDirective } from './marker-objects/marker-objects.directive';
@@ -16,9 +16,12 @@ declare var google: any;
   styleUrls: ['./app.component.css'],
   providers: [HttpService, GoogleMapsAPIWrapper, ResponsiveJsService]
 })
+
+
+
 export class AppComponent {
 
- 
+
   @ViewChild('infoWindow') infoDiv;  
   
  
@@ -45,19 +48,31 @@ export class AppComponent {
 
   setMarkers(markers: SebmGoogleMapMarker[]){
     this.markers = markers;
-     console.log('in set markers', markers);    
+    // console.log('in set markers', markers);    
   }  
 
    setMap(map: any){
     this.map = map;
+     map.setCenter(new google.maps.LatLng(30.508742,0.120850));
+    map.setZoom(Math.ceil(Math.log2(document.body.clientWidth))-9);
      console.log('in set map', map);    
   }  
  
- 
+  onResize(event) {
+    let width = document.body.clientWidth;
+     this.map.setCenter(new google.maps.LatLng(30.508742,-0.120850));
+    this.map.setZoom(Math.ceil(Math.log2(document.body.clientWidth))-9);
+   var message1 = document.getElementById("message1");
+   message1.innerHTML = document.body.clientWidth + "";
+
+   if (width < 1341){
+    this.map.setZoom(Math.ceil(Math.log2(document.body.clientWidth))-10);
+   }
+}
 
   listClick(i){
     this.markers[i].infoWindow.open();
-    console.log(this.stocks[15].c)
+   // console.log(this.stocks[15].c)
    }
 
   

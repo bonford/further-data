@@ -3,7 +3,7 @@
  
      
 
-    <div id="sidebar-wrapper">  
+    <div id="sidebar-wrapper"  (window:resize)="onResize($event)">  
  <div id="sidebar">
     <div class='heading'>
     <h1>Stock Exchange Indices</h1>
@@ -14,14 +14,14 @@
   </ul></div>  
   </div>  <!-- end sidebar-wrapper -->      
            <div class="map" id="map-wrapper"> 
-             <get-marker-objects  (markers)="setMarkers($event)" (map)="setMap($event)">  
+               
              <sebm-google-map [latitude]="_lat"  
               [longitude]="_lng"  
               [zoom]="_zoom"  
               >
 
             
-
+<get-marker-objects  (markers)="setMarkers($event)" (map)="setMap($event)">
   <sebm-google-map-marker 
   *ngFor="let m of stocks; let i = index"
   [latitude]="m.lat" [longitude]="m.lng"
@@ -42,9 +42,9 @@
   </sebm-google-map-marker>
   
 
-
+ </get-marker-objects>
   </sebm-google-map>
-    </get-marker-objects>
+   
   </div>        
       
 	  <map-footer></map-footer>
