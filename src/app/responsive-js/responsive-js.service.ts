@@ -20,8 +20,10 @@ export class ResponsiveJsService{
 
     let width = document.body.clientWidth;
     let wrapper = document.getElementById("app-wrapper");
-	let indicesHeading = document.getElementById("indices-heading");
-     map.setCenter(new google.maps.LatLng(30.508742,-0.120850));
+    let sidebarWrapper = document.getElementById("sidebar-wrapper");
+    let mapWrapper = document.getElementById("map-wrapper");
+	  let indicesHeading = document.getElementById("indices-heading");
+    map.setCenter(new google.maps.LatLng(30.508742,-0.120850));
     map.setZoom(Math.ceil(Math.log2(document.body.clientWidth))-9);
    
    
@@ -37,17 +39,13 @@ export class ResponsiveJsService{
       break;
      case (width > 800):
       wrapper.style.width = "800px";
-	  map.setZoom(2);
-      break;
-	 case (width > 665):
-      wrapper.style.width = "665px";
-	  indicesHeading.style.marginTop = "-15px"; 
-	  indicesHeading.style.color = "red";
-
 	  map.setZoom(1);
-      break;
+      break;  
    
     default:
+    
+      
+
       console.log("in switch default");
   }
 

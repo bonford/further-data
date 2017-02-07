@@ -250,6 +250,27 @@ ul.markets a:hover {
     background: #f2f5fc;
 }
 
+/* Switch to map on top info on the bottom on narrow screens */
+@media screen and (max-width: 660px) {
+
+  
+  *.sebm-google-map-container, #sidebar-wrapper {
+    height: 50%;
+    width: 100%;
+  }
+  *.sebm-google-map-container {
+    width:100%;
+    top: 0;
+    bottom: 50%;
+    left: 0;
+  }
+  #sidebar-wrapper {
+   
+    top: 50%;
+    bottom: 100%;
+  }
+}
+
 /**
  * Breaky css. These values will not show up in content, but can be 
  * queried by JavaScript to know which breakpoint is active.
