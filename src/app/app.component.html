@@ -3,7 +3,8 @@
  
      
 <div id="app-wrapper"  (window:resize)="onResize($event)">
-    <div id="sidebar-wrapper">  
+
+   <div id="sidebar-wrapper">  
  <div id="sidebar">
     <div class="heading">
     <h1 id="indices-heading">Index Watch</h1>
@@ -12,7 +13,8 @@
   <li *ngFor="let stock of stocks; let i=index; let even=even" [ngClass]="{'even': even, 'item': true}" (click)="listClick(i)"><a>{{stock.title}}</a> 
       </li>
   </ul></div>  
-  </div>  <!-- end sidebar-wrapper -->      
+  </div>  <!-- end sidebar-wrapper --> 
+   
            <div class="map" id="map-wrapper"> 
                
              <sebm-google-map [latitude]="_lat"  
@@ -46,6 +48,7 @@
   </sebm-google-map>
    
   </div>        
+       
       
 	  <map-footer></map-footer>
     </div> <!-- end app-wrapper -->

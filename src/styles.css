@@ -54,7 +54,7 @@ a:hover {
   position:relative;
    padding-bottom:50%;
     width: 33.3333%;
-    float:left;
+     float:left; 
 }
 
 #sidebar-wrapper > div {
@@ -194,21 +194,7 @@ ul.markets a:hover {
   visibility: hidden;
 }
 
-@media screen and (max-width: 660px) {
-  .map, #sidebar {
-    height: 50%;
-    width: 100%;
-  }
-  .map {
-    top: 0;
-    bottom: 50%;
-    left: 0;
-  }
-  #sidebar {
-    top: 50%;
-    bottom: 100%;
-  }
-}
+
 
 
 
@@ -251,57 +237,38 @@ ul.markets a:hover {
 }
 
 /* Switch to map on top info on the bottom on narrow screens */
-@media screen and (max-width: 660px) {
 
-  
-  *.sebm-google-map-container, #sidebar-wrapper {
-    height: 50%;
+
+  @media screen and (max-width: 660px) {
+    #app-wrapper {
+      position:relative;
+      height:200%;
+      border: 1px solid green;
+    }
+  #map-wrapper, #sidebar-wrapper {
+   position:absolute;
+    
     width: 100%;
+    
   }
-  *.sebm-google-map-container {
-    width:100%;
+
+  .markets {
+     overflow:visible;
+     height:100%;
+  }
+  #map-wrapper {
     top: 0;
     bottom: 50%;
     left: 0;
   }
   #sidebar-wrapper {
-   
-    top: 50%;
-    bottom: 100%;
+    height:100%;
+    top: 320px;
+    bottom: 0%;
   }
 }
 
-/**
- * Breaky css. These values will not show up in content, but can be 
- * queried by JavaScript to know which breakpoint is active.
- * Add or remove as many breakpoints as you like.
- */
 
-html:before {
-  content: "mobile,tablet,desktop";
-  display: none;
-}
-html:before {
-  display: none;
-}
-@media (min-width: 320px) {
-  body:before {
-    content: "mobile";
-  }
-}
-@media (min-width: 650px) {
-  body:before {
-    content: "tablet";
-  }
-
-  
-}
-@media (min-width: 1000px) {
-  body:before {
-    content: "desktop";
-    content: "";
-  }
-}
 .content {
 	padding: 40px;
 	text-align: left;

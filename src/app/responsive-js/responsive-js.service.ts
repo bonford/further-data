@@ -19,7 +19,7 @@ export class ResponsiveJsService{
   makeResponsiveAdjustments(map:any){
 
     let width = document.body.clientWidth;
-    let wrapper = document.getElementById("app-wrapper");
+    let appWrapper = document.getElementById("app-wrapper");
     let sidebarWrapper = document.getElementById("sidebar-wrapper");
     let mapWrapper = document.getElementById("map-wrapper");
 	  let indicesHeading = document.getElementById("indices-heading");
@@ -30,16 +30,28 @@ export class ResponsiveJsService{
 
        switch (true) {
     case (width > 1500):
-      wrapper.style.width = "1500px";
+      appWrapper.style.width = "1500px";
      
       break;
     case (width > 1210):
-      wrapper.style.width = "1210px";
+      appWrapper.style.width = "1210px";
      
       break;
      case (width > 800):
-      wrapper.style.width = "800px";
+      appWrapper.style.width = "800px";
 	  map.setZoom(1);
+      break;  
+
+          case (width > 680):
+      appWrapper.style.width = "680px";
+	  map.setZoom(1);
+      break; 
+
+           case (width < 680):
+       //    sidebarWrapper.style.cssFloat = "none";
+       //    mapWrapper.style.width = "100%";
+     // wrapper.style.width = "100%";
+	   // map.setZoom(1);
       break;  
    
     default:
@@ -51,10 +63,16 @@ export class ResponsiveJsService{
 
   var message1 = document.getElementById("message1");
   message1.innerHTML = "window width: " + document.body.clientWidth ;
-
-  var message1 = document.getElementById("message2");
-  message1.innerHTML = "wrapper width: " + wrapper.style.width + "";
-   
+console.log(window.getComputedStyle(appWrapper, "height"));
+  var message2 = document.getElementById("message2");
+  message2.innerHTML = "window width: " + document.body.clientWidth + "<br>" +
+                       "appWrapper width: " + window.getComputedStyle(appWrapper, "height") + "<br>" +
+                       "appWrapper height: " + appWrapper.style.height + "<br>" +
+                       "mapWrapper width: " + mapWrapper.style.width + "<br>" +
+                       "mapWrapper height: " + mapWrapper.style.height + "<br>" +
+                       "sidebarWrapper width: " + sidebarWrapper.style.width + "<br>" +
+                       "sidebarWrapper height: " + sidebarWrapper.style.height + "<br>";
+                       message2.style.marginTop = "700px";
   }
   
 
