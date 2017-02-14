@@ -24,7 +24,7 @@ export class AppComponent {
 
 
 
-  
+  title = "Further Data -- A new look at the numbers";
  
   private markers: SebmGoogleMapMarker[]; 
   private map: any;

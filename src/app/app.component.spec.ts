@@ -37,13 +37,15 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
+
   }));
-/*
-  it(`should have as title 'Further Data -- A new look at the numbers'`, async(() => {
+
+  it('should have as title: Further Data -- A new look at the numbers', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Further Data -- A new look at the numbers');
-  })); */
+    console.log(app);
+  }));
 
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
