@@ -10,18 +10,18 @@
     <h2>A sample project description</h2>
     <table cellspacing="0" cellpadding="0" border="0">
       <tr class="overview">
-        <td colspan="3" title="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36">Browser: Chrome 56.0.2924 (Windows 7 0.0.0)</td>
+        <td colspan="3" title="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36">Browser: Chrome 56.0.2924 (Windows 7 0.0.0)</td>
       </tr>
       <tr class="overview">
-        <td colspan="3">Timestamp: 2/13/2017, 9:11:42 PM</td>
+        <td colspan="3">Timestamp: 2/14/2017, 9:48:18 AM</td>
       </tr>
       <tr>
         <td colspan="3">
-          0 tests / 
-          1 errors / 
-          0 failures / 
+          6 tests / 
+          0 errors / 
+          3 failures / 
           0 skipped / 
-          runtime: 0s
+          runtime: 0.799s
         </td>
       </tr>
       <tr class="header">
@@ -29,10 +29,95 @@
         <td>Spec</td>
         <td>Suite / Results</td>
       </tr>
-      <tr class="system-errors">
-        <td colspan="3"><strong>Errors:</strong><br />Uncaught TypeError: Cannot read property 'prototype' of undefined
-at src/test.ts:73077
-</td>
+      <tr class="fail">
+        <td>Failed</td>
+        <td>should create the app</td>
+        <td>
+          AppComponent
+          <br />Failed: No provider for Http!
+Error: DI Error
+    at NoProviderError.ZoneAwareError (webpack:///~/zone.js/dist/zone.js:811:0 &lt;- src/test.ts:78537:33)
+    at NoProviderError.BaseError [as constructor] (webpack:///~/@angular/core/src/facade/errors.js:22:0 &lt;- src/test.ts:5687:16)
+    at NoProviderError.AbstractProviderError [as constructor] (webpack:///~/@angular/core/src/di/reflective_errors.js:54:0 &lt;- src/test.ts:47743:16)
+    at new NoProviderError (webpack:///~/@angular/core/src/di/reflective_errors.js:116:0 &lt;- src/test.ts:47805:16)
+    at ReflectiveInjector_._throwOrNull (webpack:///~/@angular/core/src/di/reflective_injector.js:1014:0 &lt;- src/test.ts:68682:19)
+    at ReflectiveInjector_._getByKeyDefault (webpack:///~/@angular/core/src/di/reflective_injector.js:1053:0 &lt;- src/test.ts:68721:25)
+    at ReflectiveInjector_._getByKey (webpack:///~/@angular/core/src/di/reflective_injector.js:1000:0 &lt;- src/test.ts:68668:25)
+    at ReflectiveInjector_.get (webpack:///~/@angular/core/src/di/reflective_injector.js:760:0 &lt;- src/test.ts:68428:21)
+    at TestBed.get (webpack:///~/@angular/core/bundles/core-testing.umd.js:821:0 &lt;- src/test.ts:9752:67)
+    at CompiledTemplate.proxyViewClass.AppView.injectorGet (webpack:///~/@angular/core/src/linker/view.js:152:0 &lt;- src/test.ts:69455:45)
+    at CompiledTemplate.proxyViewClass.DebugAppView.injectorGet (webpack:///~/@angular/core/src/linker/view.js:580:0 &lt;- src/test.ts:69883:49)
+    at CompiledTemplate.proxyViewClass.View_AppComponent_Host0.createInternal (/DynamicTestModule/AppComponent/host.ngfactory.js:21:53)
+    at CompiledTemplate.proxyViewClass.AppView.createHostView (webpack:///~/@angular/core/src/linker/view.js:108:0 &lt;- src/test.ts:69411:21)
+    at CompiledTemplate.proxyViewClass.DebugAppView.createHostView (webpack:///~/@angular/core/src/linker/view.js:564:0 &lt;- src/test.ts:69867:52)
+    at ComponentFactory.create (webpack:///~/@angular/core/src/linker/component_factory.js:223:0 &lt;- src/test.ts:34444:25)
+
+        </td>
+      </tr>
+      <tr class="fail">
+        <td>Failed</td>
+        <td>should have as title 'Further Data -- A new look at the numbers'</td>
+        <td>
+          AppComponent
+          <br />Failed: No provider for Http!
+Error: DI Error
+    at NoProviderError.ZoneAwareError (webpack:///~/zone.js/dist/zone.js:811:0 &lt;- src/test.ts:78537:33)
+    at NoProviderError.BaseError [as constructor] (webpack:///~/@angular/core/src/facade/errors.js:22:0 &lt;- src/test.ts:5687:16)
+    at NoProviderError.AbstractProviderError [as constructor] (webpack:///~/@angular/core/src/di/reflective_errors.js:54:0 &lt;- src/test.ts:47743:16)
+    at new NoProviderError (webpack:///~/@angular/core/src/di/reflective_errors.js:116:0 &lt;- src/test.ts:47805:16)
+    at ReflectiveInjector_._throwOrNull (webpack:///~/@angular/core/src/di/reflective_injector.js:1014:0 &lt;- src/test.ts:68682:19)
+    at ReflectiveInjector_._getByKeyDefault (webpack:///~/@angular/core/src/di/reflective_injector.js:1053:0 &lt;- src/test.ts:68721:25)
+    at ReflectiveInjector_._getByKey (webpack:///~/@angular/core/src/di/reflective_injector.js:1000:0 &lt;- src/test.ts:68668:25)
+    at ReflectiveInjector_.get (webpack:///~/@angular/core/src/di/reflective_injector.js:760:0 &lt;- src/test.ts:68428:21)
+    at TestBed.get (webpack:///~/@angular/core/bundles/core-testing.umd.js:821:0 &lt;- src/test.ts:9752:67)
+    at CompiledTemplate.proxyViewClass.AppView.injectorGet (webpack:///~/@angular/core/src/linker/view.js:152:0 &lt;- src/test.ts:69455:45)
+    at CompiledTemplate.proxyViewClass.DebugAppView.injectorGet (webpack:///~/@angular/core/src/linker/view.js:580:0 &lt;- src/test.ts:69883:49)
+    at CompiledTemplate.proxyViewClass.View_AppComponent_Host0.createInternal (/DynamicTestModule/AppComponent/host.ngfactory.js:21:53)
+    at CompiledTemplate.proxyViewClass.AppView.createHostView (webpack:///~/@angular/core/src/linker/view.js:108:0 &lt;- src/test.ts:69411:21)
+    at CompiledTemplate.proxyViewClass.DebugAppView.createHostView (webpack:///~/@angular/core/src/linker/view.js:564:0 &lt;- src/test.ts:69867:52)
+    at ComponentFactory.create (webpack:///~/@angular/core/src/linker/component_factory.js:223:0 &lt;- src/test.ts:34444:25)
+
+        </td>
+      </tr>
+      <tr class="fail">
+        <td>Failed</td>
+        <td>should render title in a h1 tag</td>
+        <td>
+          AppComponent
+          <br />Failed: No provider for Http!
+Error: DI Error
+    at NoProviderError.ZoneAwareError (webpack:///~/zone.js/dist/zone.js:811:0 &lt;- src/test.ts:78537:33)
+    at NoProviderError.BaseError [as constructor] (webpack:///~/@angular/core/src/facade/errors.js:22:0 &lt;- src/test.ts:5687:16)
+    at NoProviderError.AbstractProviderError [as constructor] (webpack:///~/@angular/core/src/di/reflective_errors.js:54:0 &lt;- src/test.ts:47743:16)
+    at new NoProviderError (webpack:///~/@angular/core/src/di/reflective_errors.js:116:0 &lt;- src/test.ts:47805:16)
+    at ReflectiveInjector_._throwOrNull (webpack:///~/@angular/core/src/di/reflective_injector.js:1014:0 &lt;- src/test.ts:68682:19)
+    at ReflectiveInjector_._getByKeyDefault (webpack:///~/@angular/core/src/di/reflective_injector.js:1053:0 &lt;- src/test.ts:68721:25)
+    at ReflectiveInjector_._getByKey (webpack:///~/@angular/core/src/di/reflective_injector.js:1000:0 &lt;- src/test.ts:68668:25)
+    at ReflectiveInjector_.get (webpack:///~/@angular/core/src/di/reflective_injector.js:760:0 &lt;- src/test.ts:68428:21)
+    at TestBed.get (webpack:///~/@angular/core/bundles/core-testing.umd.js:821:0 &lt;- src/test.ts:9752:67)
+    at CompiledTemplate.proxyViewClass.AppView.injectorGet (webpack:///~/@angular/core/src/linker/view.js:152:0 &lt;- src/test.ts:69455:45)
+    at CompiledTemplate.proxyViewClass.DebugAppView.injectorGet (webpack:///~/@angular/core/src/linker/view.js:580:0 &lt;- src/test.ts:69883:49)
+    at CompiledTemplate.proxyViewClass.View_AppComponent_Host0.createInternal (/DynamicTestModule/AppComponent/host.ngfactory.js:21:53)
+    at CompiledTemplate.proxyViewClass.AppView.createHostView (webpack:///~/@angular/core/src/linker/view.js:108:0 &lt;- src/test.ts:69411:21)
+    at CompiledTemplate.proxyViewClass.DebugAppView.createHostView (webpack:///~/@angular/core/src/linker/view.js:564:0 &lt;- src/test.ts:69867:52)
+    at ComponentFactory.create (webpack:///~/@angular/core/src/linker/component_factory.js:223:0 &lt;- src/test.ts:34444:25)
+
+        </td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.029s</td>
+        <td>should ...</td>
+        <td>HttpService</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.048s</td>
+        <td>should create</td>
+        <td>MapFooterComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.019s</td>
+        <td>should ...</td>
+        <td>ResponsiveJsService</td>
       </tr>
     </table>
     <hr/>

@@ -3,7 +3,7 @@ import { NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { HttpService } from './http/http.service';
-import { AbstractMockObservableService } from '../mocks/mock-observable.service';
+import  {AbstractMockObservableService } from '../mocks/mock-observable.service';
 
 class MockService extends AbstractMockObservableService {
   getFurtherData() {
