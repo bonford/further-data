@@ -17,9 +17,16 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-      providers: [MockService],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+        schemas: [CUSTOM_ELEMENTS_SCHEMA]
     });
+
+     TestBed.overrideComponent(AppComponent, {
+    set: {
+      providers: [
+        { provide: HttpService, useClass: MockService }
+      ]
+    }
+  }); 
     TestBed.compileComponents();
   });
 
