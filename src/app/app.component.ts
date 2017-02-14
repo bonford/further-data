@@ -1,4 +1,5 @@
 import { ViewChild, ViewChildren, ElementRef} from '@angular/core';
+
 import { Component, HostListener } from '@angular/core';
 import {HttpService} from './http/http.service';
 import {SebmGoogleMapMarker, SebmGoogleMapInfoWindow, GoogleMapsAPIWrapper, MarkerManager} from 'angular2-google-maps/core';
@@ -14,8 +15,8 @@ declare var google: any;
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [HttpService, GoogleMapsAPIWrapper, ResponsiveJsService]
-})
+  providers: [HttpService, GoogleMapsAPIWrapper, ResponsiveJsService],
+ })
 
 
 

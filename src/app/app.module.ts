@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AgmCoreModule } from 'angular2-google-maps/core';
@@ -8,15 +8,14 @@ import { MarkerObjectsDirective } from './marker-objects/marker-objects.directiv
 import { MapFooterComponent } from './map-footer/map-footer.component';
 
 
+
 @NgModule({
+  bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-    MarkerObjectsDirective,
+    MarkerObjectsDirective,    
     MapFooterComponent    
-  ],
-  schemas: [ 
-    CUSTOM_ELEMENTS_SCHEMA
-     ],
+  ],  
   imports: [
     BrowserModule,
     FormsModule,
@@ -26,7 +25,8 @@ import { MapFooterComponent } from './map-footer/map-footer.component';
     })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+ 
+  
 })
 export class AppModule { }
 
