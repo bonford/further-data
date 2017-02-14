@@ -13,6 +13,12 @@ class MockService extends AbstractMockObservableService {
   }
 }
 
+class MockResponsiveJsService extends ResponsiveJsService {
+   makeResponsiveAdjustments(map:any){
+     return true;
+   }
+}
+
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -26,7 +32,8 @@ describe('AppComponent', () => {
      TestBed.overrideComponent(AppComponent, {
     set: {
       providers: [
-        { provide: HttpService, useClass: MockService }
+        { provide: HttpService, useClass: MockService },
+        { provide: ResponsiveJsService, useClass: MockResponsiveJsService }
       ]
     }
   }); 
@@ -46,7 +53,14 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Further Data -- A new look at the numbers');
     console.log(app);
   }));
-
+/*
+   it('should access the responsivejs service', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.makeResponsiveAdjustments(this.map)).toEqual(true);
+    
+  }));
+*/
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
