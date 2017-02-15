@@ -13,15 +13,15 @@
         <td colspan="3" title="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36">Browser: Chrome 56.0.2924 (Windows 7 0.0.0)</td>
       </tr>
       <tr class="overview">
-        <td colspan="3">Timestamp: 2/14/2017, 4:55:51 PM</td>
+        <td colspan="3">Timestamp: 2/15/2017, 12:32:07 PM</td>
       </tr>
       <tr>
         <td colspan="3">
-          6 tests / 
+          7 tests / 
           0 errors / 
-          0 failures / 
+          1 failures / 
           0 skipped / 
-          runtime: 0.887s
+          runtime: 0.964s
         </td>
       </tr>
       <tr class="header">
@@ -30,37 +30,61 @@
         <td>Suite / Results</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.369s</td>
+        <td>Passed in 0.391s</td>
         <td>should create the app</td>
         <td>AppComponent</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.203s</td>
+        <td>Passed in 0.22s</td>
         <td>should have as title: Further Data -- A new look at the numbers</td>
         <td>AppComponent</td>
       </tr>
+      <tr class="fail">
+        <td>Failed</td>
+        <td>should call getFurtherData on initialization</td>
+        <td>
+          AppComponent
+          <br />Failed: Cannot read property 'subscribe' of undefined
+TypeError: Cannot read property 'subscribe' of undefined
+    at AppComponent.ngOnInit (webpack:///src/app/app.component.ts:45:5 &lt;- src/test.ts:73212:13)
+    at webpack:///src/app/app.component.spec.ts:66:8 &lt;- src/test.ts:73167:13
+    at ZoneDelegate.invoke (webpack:///~/zone.js/dist/zone.js:242:0 &lt;- src/test.ts:78004:26)
+    at AsyncTestZoneSpec.onInvoke (webpack:///~/zone.js/dist/async-test.js:49:0 &lt;- src/test.ts:56589:39)
+    at ProxyZoneSpec.onInvoke (webpack:///~/zone.js/dist/proxy.js:76:0 &lt;- src/test.ts:57281:39)
+    at ZoneDelegate.invoke (webpack:///~/zone.js/dist/zone.js:241:0 &lt;- src/test.ts:78003:32)
+    at Zone.runGuarded (webpack:///~/zone.js/dist/zone.js:126:0 &lt;- src/test.ts:77888:47)
+    at runInTestZone (webpack:///~/@angular/core/bundles/core-testing.umd.js:105:0 &lt;- src/test.ts:9036:29)
+    at Object.&lt;anonymous&gt; (webpack:///~/@angular/core/bundles/core-testing.umd.js:48:0 &lt;- src/test.ts:8979:17)
+    at ZoneDelegate.invoke (webpack:///~/zone.js/dist/zone.js:242:0 &lt;- src/test.ts:78004:26)
+    at ProxyZoneSpec.onInvoke (webpack:///~/zone.js/dist/proxy.js:79:0 &lt;- src/test.ts:57284:39)
+    at ZoneDelegate.invoke (webpack:///~/zone.js/dist/zone.js:241:0 &lt;- src/test.ts:78003:32)
+    at Zone.run (webpack:///~/zone.js/dist/zone.js:113:0 &lt;- src/test.ts:77875:43)
+    at Object.&lt;anonymous&gt; (webpack:///~/zone.js/dist/jasmine-patch.js:104:0 &lt;- src/test.ts:57001:34)
+
+        </td>
+      </tr>
       <tr class="pass">
-        <td>Passed in 0.191s</td>
+        <td>Passed in 0.172s</td>
         <td>should render title in a h1 tag</td>
         <td>AppComponent</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.028s</td>
+        <td>Passed in 0.02s</td>
         <td>should ...</td>
         <td>HttpService</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.059s</td>
+        <td>Passed in 0.037s</td>
         <td>should create</td>
         <td>MapFooterComponent</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.037s</td>
+        <td>Passed in 0.035s</td>
         <td>should ...</td>
         <td>ResponsiveJsService</td>
       </tr>
       <tr class="system-out">
-        <td colspan="3"><strong>System output:</strong><br />Chrome 56.0.2924 (Windows 7 0.0.0) LOG: AppComponent{_httpService: MockService{}, _googleMapsAPIWrapper: GoogleMapsAPIWrapper{_loader: MapsAPILoader{}, _zone: NgZone{_hasPendingMicrotasks: ..., _hasPendingMacrotasks: ..., _isStable: ..., _nesting: ..., _onUnstable: ..., _onMicrotaskEmpty: ..., _onStable: ..., _onErrorEvents: ..., inner: ..., outer: ...}, _mapResolver: function (v) { ... }, _map: ZoneAwarePromise{__zone_symbol__state: ..., __zone_symbol__value: ...}}, _responsiveJsService: MockResponsiveJsService{}, title: 'Further Data -- A new look at the numbers', date: Tue Feb 14 2017 16:55:51 GMT-0500 (Eastern Standard Time), _lat: -30.601753, _lng: 40.369636, _zoom: 1}
+        <td colspan="3"><strong>System output:</strong><br />Chrome 56.0.2924 (Windows 7 0.0.0) LOG: AppComponent{_httpService: MockService{}, _googleMapsAPIWrapper: GoogleMapsAPIWrapper{_loader: MapsAPILoader{}, _zone: NgZone{_hasPendingMicrotasks: ..., _hasPendingMacrotasks: ..., _isStable: ..., _nesting: ..., _onUnstable: ..., _onMicrotaskEmpty: ..., _onStable: ..., _onErrorEvents: ..., inner: ..., outer: ...}, _mapResolver: function (v) { ... }, _map: ZoneAwarePromise{__zone_symbol__state: ..., __zone_symbol__value: ...}}, _responsiveJsService: MockResponsiveJsService{}, title: 'Further Data -- A new look at the numbers', date: Wed Feb 15 2017 12:32:08 GMT-0500 (Eastern Standard Time), _lat: -30.601753, _lng: 40.369636, _zoom: 1}
 </td>
       </tr>
     </table>

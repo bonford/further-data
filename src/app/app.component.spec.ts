@@ -54,13 +54,21 @@ describe('AppComponent', () => {
     console.log(app);
   }));
 /*
-   it('should access the responsivejs service', async(() => {
+ngOnInit(){
+    this._httpService.getFurtherData()
+    .subscribe(resFurtherData => this.stocks = resFurtherData);
+  }
+  */
+   it('should call getFurtherData on initialization', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.makeResponsiveAdjustments(this.map)).toEqual(true);
+    spyOn(app._httpService,'getFurtherData');
+    app.ngOnInit();
+    
+    expect(app._httpService.getFurtherData).toHaveBeenCalled();
     
   }));
-*/
+
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
