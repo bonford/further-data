@@ -61,12 +61,13 @@ ngOnInit(){
   */
    it('should call getFurtherData on initialization', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
-    let service = fixture.debugElement.injector.get(HttpService);
+    let service = fixture.debugElement.injector.get(ResponsiveJsService);
     const app = fixture.debugElement.componentInstance;
-    spyOn(service,'getFurtherData');
-    app.ngOnInit();
+    spyOn(service,'makeResponsiveAdjustments');
+    app.setMap(app.map);
     fixture.detectChanges();
-    expect(service.getFurtherData).toHaveBeenCalled();
+    expect(service.makeResponsiveAdjustments).toHaveBeenCalled();
+    
     
   }));
 
