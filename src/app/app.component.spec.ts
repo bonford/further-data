@@ -25,7 +25,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-      providers: [GoogleMapsAPIWrapper, MapsAPILoader, ResponsiveJsService],
+      providers: [GoogleMapsAPIWrapper, MapsAPILoader, ResponsiveJsService, HttpService],
         schemas: [CUSTOM_ELEMENTS_SCHEMA]
     });
 
@@ -61,11 +61,12 @@ ngOnInit(){
   */
    it('should call getFurtherData on initialization', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
+    let service = fixture.debugElement.injector.get(HttpService);
     const app = fixture.debugElement.componentInstance;
-    spyOn(app._httpService,'getFurtherData');
+    spyOn(service,'getFurtherData');
     app.ngOnInit();
-    
-    expect(app._httpService.getFurtherData).toHaveBeenCalled();
+    fixture.detectChanges();
+    expect(service.getFurtherData).toHaveBeenCalled();
     
   }));
 
