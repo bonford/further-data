@@ -4,7 +4,7 @@ import { Component, HostListener } from '@angular/core';
 import {HttpService} from './http/http.service';
 import {SebmGoogleMapMarker, SebmGoogleMapInfoWindow, GoogleMapsAPIWrapper, MarkerManager} from 'angular2-google-maps/core';
 import { MarkerObjectsDirective } from './marker-objects/marker-objects.directive';
-import { ResponsiveJsService } from './responsive-js/responsive-js.service'
+import { ResponsiveJsService } from './responsive-js/responsive-js.service';
 import { MapFooterComponent } from './map-footer/map-footer.component';
 declare var google: any;
 

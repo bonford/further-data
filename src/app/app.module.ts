@@ -14,7 +14,7 @@ import { MapFooterComponent } from './map-footer/map-footer.component';
   declarations: [
     AppComponent,
     MarkerObjectsDirective,    
-    MapFooterComponent    
+    MapFooterComponent
   ],  
   imports: [
     BrowserModule,
