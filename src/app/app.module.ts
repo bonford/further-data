@@ -6,6 +6,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
 import { AppComponent } from './app.component';
 import { MarkerObjectsDirective } from './marker-objects/marker-objects.directive';
 import { MapFooterComponent } from './map-footer/map-footer.component';
+import { CloudsComponent } from './clouds/clouds.component';
 
 
 
@@ -14,7 +15,7 @@ import { MapFooterComponent } from './map-footer/map-footer.component';
   declarations: [
     AppComponent,
     MarkerObjectsDirective,    
-    MapFooterComponent
+    MapFooterComponent, CloudsComponent, CloudsComponent
   ],  
   imports: [
     BrowserModule,

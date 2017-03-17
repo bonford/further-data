@@ -48,7 +48,7 @@ export class MarkerObjectsDirective implements AfterViewInit {
  // get native map
     this._googleMapsWrapper.getNativeMap().then(map => {
       this.map = map; 
-      console.log('in marker-objects, getting map', this.map);     
+     // console.log('in marker-objects, getting map', this.map);     
     }, error => {
       throw error;
     })

@@ -5,13 +5,20 @@ import 'rxjs/add/operator/map';
 @Injectable()
 
 export class HttpService {
- private _url: string = 'http://www.documenthunt.com/googjson/getIndexJSON.php';
+
 
   constructor(private _http: Http) { }
 
-  getFurtherData(){
+  getFurtherData(url:string){
     
-    return this._http.get(this._url)
+    return this._http.get(url)
+    .map((response:Response) => response.json());
+
+  }
+
+   getFurtherClouds(url:string){
+    
+    return this._http.get(url)
     .map((response:Response) => response.json());
 
   }

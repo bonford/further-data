@@ -41,8 +41,9 @@ export class AppComponent {
 
 
   ngOnInit(){
-    this._httpService.getFurtherData()
+    this._httpService.getFurtherData('http://www.documenthunt.com/googjson/getIndexJSON.php')
     .subscribe(resFurtherData => this.stocks = resFurtherData);
+    console.log("in ngOnInit", this.stocks);
   }
 
  
@@ -60,7 +61,7 @@ export class AppComponent {
 
     
   
-     console.log('in set map', map);    
+    // console.log('in set map', map);    
   }  
  
   onResize(event) {

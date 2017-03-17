@@ -60,10 +60,10 @@ export class ResponsiveJsService{
 
      
   }
- console.log("in switch default", window.getComputedStyle(appWrapper, "height").height);
+ //console.log("in switch default", window.getComputedStyle(appWrapper, "height").height);
   var message1 = document.getElementById("message1");
   message1.innerHTML = "window width: " + document.body.clientWidth ;
-console.log(window.getComputedStyle(appWrapper, "height"));
+//console.log(window.getComputedStyle(appWrapper, "height"));
   var message2 = document.getElementById("message2");
   message2.innerHTML = "window width: " + document.body.clientWidth + "<br>" +
                        "appWrapper width: " + window.getComputedStyle(appWrapper).width + "<br>" +
