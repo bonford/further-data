@@ -1,3 +1,12 @@
+for debugging: choose Launch Chrome against localhost configuration
+npm start (try ng serve too)
+navigate to localhost:4200 in the browser that pops up
+debug in visual studio code
+
+
+
+
+
 prettified result of: http://www.documenthunt.com/googjson/googjson.php?q=aapl,ibm,boogle,xei.to
 
 Example of how to get the markers into the component using a directive
