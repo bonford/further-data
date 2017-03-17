@@ -1,5 +1,17 @@
 <p>
  Clouds works!
     </p>
+
+<h2>Price Cloud</h2>
+    <ul>
+  <li *ngFor="let priceMover of priceMovers; let i=index; let even=even" ><a>{{priceMover.symbol}}</a> 
+      </li>
+  </ul>
+
+<h2>Volume Cloud</h2>
+   <ul>
+  <li *ngFor="let volumeMover of volumeMovers; let i=index; let even=even" ><a>{{volumeMover.symbol}}</a> 
+      </li>
+  </ul>
  
 

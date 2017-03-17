@@ -9,14 +9,20 @@ import {HttpService} from '../http/http.service';
 })
 export class CloudsComponent implements OnInit {
 
-  movers: any[];
+  priceMovers;
+  volumeMovers;
+
 
   constructor( private _httpService: HttpService) { }
 
   ngOnInit() {
-     this._httpService.getFurtherClouds('http://www.documenthunt.com/googjson/getIndexJSON.php')
-    .subscribe(resMoverData => this.movers = resMoverData);
-    console.log("in clouds component", this.movers);
+     this._httpService.getFurtherClouds('http://www.documenthunt.com/googjson/handleclouds.php?type=pricedeltas')
+    .subscribe(resMoverData => this.priceMovers = resMoverData);
+
+
+     this._httpService.getFurtherClouds('http://www.documenthunt.com/googjson/handleclouds.php?type=volumedeltas')
+    .subscribe(resMoverData => this.volumeMovers = resMoverData);
+    console.log("in clouds component", this.volumeMovers);
    //this.printResult();
   }
 
