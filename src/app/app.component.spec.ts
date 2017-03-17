@@ -1,11 +1,14 @@
 import { DebugElement } from '@angular/core';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { BaseRequestOptions, Response, ResponseOptions, Http } from '@angular/http';
+import { MockBackend, MockConnection } from '@angular/http/testing';
 import {SebmGoogleMapMarker, SebmGoogleMapInfoWindow, GoogleMapsAPIWrapper, MarkerManager, MapsAPILoader} from 'angular2-google-maps/core';
 import { ResponsiveJsService } from './responsive-js/responsive-js.service';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import { By } from '@angular/platform-browser';
-import { ComponentFixture, TestBed, async, fakeAsync, tick } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async, fakeAsync, tick, inject } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { MockExchanges } from '..//mocks/exchanges.data.mock';
 import { HttpService } from './http/http.service';
 
 //note: createComponent calls have to be in the "it" blocks, not the beforeEach as in the tutorial
@@ -25,18 +28,46 @@ describe('AppComponent', () => {
         TestBed.configureTestingModule({
             declarations: [AppComponent],
             imports: [HttpModule],
-            providers: [HttpService, GoogleMapsAPIWrapper,MapsAPILoader, ResponsiveJsService],
+            providers: [HttpService, GoogleMapsAPIWrapper,MapsAPILoader, ResponsiveJsService, MockBackend, BaseRequestOptions,
+            {
+                provide: Http, 
+                useFactory: (backend: MockBackend, defaultOptions: BaseRequestOptions) => {
+                    return new Http(backend, defaultOptions);
+                },
+                deps: [MockBackend, BaseRequestOptions],
+
+            },
+            ],
             schemas: [CUSTOM_ELEMENTS_SCHEMA]
         });
-        TestBed.compileComponents();
+       // TestBed.compileComponents();
 
 
     });
 
+    it('should create a service', inject([HttpService], (service: HttpService) => {
+        expect(service).toBeTruthy();
+    }));
 
+    it('should return exchanges', inject([HttpService, MockBackend], (service: HttpService, backend: MockBackend) => {
+    let response = new ResponseOptions({
+      body: JSON.stringify(MockExchanges)
+    });
+
+    const baseResponse = new Response(response);
+
+    backend.connections.subscribe(
+      (c: MockConnection) => c.mockRespond(baseResponse)
+    );
+
+    return service.getFurtherData().subscribe( data => {
+      expect(data).toEqual(MockExchanges);
+    });
+
+}));
 
   
-
+/*
     it('should not show quote before OnInit', () => {
         let fixture = TestBed.createComponent(AppComponent);
         const app = fixture.debugElement.componentInstance;
@@ -49,7 +80,7 @@ describe('AppComponent', () => {
        // expect(spy.calls.any()).toBe(false, 'getQuote not yet called');
 
     });
-  /*
+  
         it('should still not show quote after component initialized', () => {
             const fixture = TestBed.createComponent(TwainComponent);
             const app = fixture.debugElement.componentInstance;
