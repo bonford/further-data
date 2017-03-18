@@ -3,15 +3,15 @@
     </p>
 
 <h2>Price Cloud</h2>
-    <ul>
-  <li *ngFor="let priceMover of priceMovers; let i=index; let even=even" ><a>{{priceMover.symbol}}</a> 
-      </li>
-  </ul>
+    <div style="width:20em;border:1px solid blue; padding:1em;line-height:200%">
+  <span  *ngFor="let priceMover of priceMovers; let i=index; let even=even" style="font-family: Arial Black bold; font-weight:900;" [style.font-size.%]="priceMover.normalized * fontFactor"><a href="http://finance.yahoo.com/q?s={{priceMover.symbol}}" target="_blank" title="{{priceMover.symbol}}: {{priceMover.rawnumber}} % gain">{{priceMover.symbol}}</a> 
+      </span>
+  </div>
 
 <h2>Volume Cloud</h2>
    <ul>
-  <li *ngFor="let volumeMover of volumeMovers; let i=index; let even=even" ><a>{{volumeMover.symbol}}</a> 
-      </li>
+  <span style="font-family: Arial Black bold; font-weight:900" *ngFor="let volumeMover of volumeMovers; let i=index; let even=even" ><a>{{volumeMover.symbol}}</a> 
+      </span>
   </ul>
  
 
