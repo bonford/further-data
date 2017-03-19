@@ -3,14 +3,14 @@
     </p>
 
 <h2>Price Cloud</h2>
-    <div style="width:20em;border:1px solid blue; padding:1em;line-height:200%">
-  <span  *ngFor="let priceMover of priceMovers; let i=index; let even=even" style="font-family: Arial Black bold; font-weight:900;" [style.font-size.%]="priceMover.normalized * fontFactor"><a href="http://finance.yahoo.com/q?s={{priceMover.symbol}}" target="_blank" title="{{priceMover.symbol}}: {{priceMover.rawnumber}} % gain">{{priceMover.symbol}}</a> 
+    <div class="fd_c_container">
+  <span  *ngFor="let priceMover of priceMovers; let i=index; let even=even" style="font-family: Arial Black bold; font-weight:900;" [style.font-size.%]="priceMover.normalized * fontFactor" [ngClass]="{'fd_c_up': priceMover.direction == 'Up', 'fd_c_down': priceMover.direction == 'Down'}"><a href="http://finance.yahoo.com/q?s={{priceMover.symbol}}" target="_blank" title="{{priceMover.symbol}}: {{priceMover.rawnumber}} % gain">{{priceMover.symbol}}&nbsp;</a> 
       </span>
   </div>
 
 <h2>Volume Cloud</h2>
    <ul>
-  <span style="font-family: Arial Black bold; font-weight:900" *ngFor="let volumeMover of volumeMovers; let i=index; let even=even" ><a>{{volumeMover.symbol}}</a> 
+  <span style="font-family: Arial Black bold; font-weight:900" *ngFor="let volumeMover of volumeMovers; let i=index; let even=even" ><a>{{volumeMover.symbol}}&nbsp;</a> 
       </span>
   </ul>
  

@@ -1,0 +1,20 @@
+.fd_c_up a{
+    color: green;
+    background: url(assets/up.png) no-repeat right top;
+    background-position:100%, 50%;
+    padding-right: 0.2em;
+}
+
+.fd_c_down a {
+    color: red;
+    background: url(assets/down.png) no-repeat right top;
+    padding-right: 0.2em;
+    background-position:100%, 50%;
+}
+
+.fd_c_container {
+    width:50em;
+    border:1px solid blue; 
+    padding:3em;
+    line-height:350%;
+    }

@@ -11,7 +11,7 @@ export class CloudsComponent implements OnInit {
 
   priceMovers;
   volumeMovers;
-  fontFactor = 1.5;
+  fontFactor = 3;
 
 
   constructor( private _httpService: HttpService) { }
